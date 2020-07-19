@@ -4,7 +4,7 @@ PIPE_NAME="test-pipe"
 
 mkfifo $PIPE_NAME
 
-./script.rb $PIPE_NAME&
+ruby -Ilib script.rb $PIPE_NAME&
 PID=$!
 
 # Wait some time while ruby come to life
