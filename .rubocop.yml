@@ -1,0 +1,14 @@
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Naming/MethodParameterName:
+  AllowedNames:
+    - fd # File descriptor

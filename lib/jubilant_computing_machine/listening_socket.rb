@@ -1,12 +1,13 @@
 # frozen_string_literal: true
+
 require 'socket'
 
 module JubilantComputingMachine
   class ListeningSocket
-    LOCALHOST = '127.0.0.1'.freeze
+    LOCALHOST = '127.0.0.1'
 
     attr_reader :socket, :backlog
-    alias_method :fd, :socket
+    alias fd socket
 
     def initialize(port: 2200, backlog: 3)
       @socket = Socket.new(:INET, :STREAM)

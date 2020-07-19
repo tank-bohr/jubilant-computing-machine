@@ -3,3 +3,6 @@ test:
 
 clean:
 	rm test-pipe
+
+lint:
+	bundle exec rubocop

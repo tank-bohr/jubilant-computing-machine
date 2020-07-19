@@ -1,10 +1,11 @@
 # frozen_string_literal: true
-require "jubilant_computing_machine/worker"
+
+require 'jubilant_computing_machine/worker'
 
 module JubilantComputingMachine
   class WrokersPool
     attr_reader :listening_socket, :workers_count, :worker_pids, :pipes, :client
-    alias_method :socket, :listening_socket
+    alias socket listening_socket
 
     def initialize(listening_socket:, client:, workers_count: 3)
       @listening_socket = listening_socket

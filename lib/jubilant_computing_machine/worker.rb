@@ -14,9 +14,7 @@ module JubilantComputingMachine
 
     def run
       set_process_title
-      while run?
-        run_select
-      end
+      run_select while run?
     end
 
     def stop!
@@ -30,7 +28,7 @@ module JubilantComputingMachine
     end
 
     def run_select
-      ready, _, _ = select([listening_socket.fd, pipe])
+      ready, = select([listening_socket.fd, pipe])
       ready.each(&method(:process_fd))
     end
 
